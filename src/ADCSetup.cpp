@@ -64,10 +64,7 @@ if (Res == 8) {
 
 
 void AttachADC0(int ADCpin, bool IDACRefon) {
-  
-    if (ADCpin < A0) {
-    ADCpin += A0;
-  };
+
 
   if (IDACRefon) {
 ADC0->INPUTCTRL.bit.MUXNEG = 0;
@@ -99,9 +96,7 @@ return(anv);
 
 
 int FastAnalogRead(int pin) {
-    if (pin < A0) {
-    pin += A0;
-  };
+
   if (mp) {
 ADC0->INPUTCTRL.bit.MUXNEG = 0;
 ADC0->INPUTCTRL.bit.MUXPOS = pin;
@@ -180,9 +175,7 @@ if (Res == 8) {
 
 
 void AttachADC1(int ADCpin, bool IDACRefon) {
-    if (ADCpin < A0) {
-    ADCpin += A0;
-  };
+
   if (IDACRefon) {
 ADC1->INPUTCTRL.bit.MUXNEG = 0;
 ADC1->INPUTCTRL.bit.MUXPOS = ADCpin;
