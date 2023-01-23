@@ -68,10 +68,10 @@ void AttachADC0(int ADCpin, bool IDACRefon) {
 
   if (IDACRefon) {
 ADC0->INPUTCTRL.bit.MUXNEG = 0;
-ADC0->INPUTCTRL.bit.MUXPOS = ADCpin;
+ADC0->INPUTCTRL.bit.MUXPOS = g_APinDescription[ADCpin].ulADCChannelNumber;
   } else {
 ADC0->INPUTCTRL.bit.MUXNEG = 0x18;
-ADC0->INPUTCTRL.bit.MUXPOS = ADCpin;
+ADC0->INPUTCTRL.bit.MUXPOS = g_APinDescription[ADCpin].ulADCChannelNumber;
   };
   
 }
@@ -99,10 +99,10 @@ int FastAnalogRead(int pin) {
 
   if (mp) {
 ADC0->INPUTCTRL.bit.MUXNEG = 0;
-ADC0->INPUTCTRL.bit.MUXPOS = pin;
+ADC0->INPUTCTRL.bit.MUXPOS = g_APinDescription[pin].ulADCChannelNumber;
   } else {
 ADC0->INPUTCTRL.bit.MUXNEG = 0x18;
-ADC0->INPUTCTRL.bit.MUXPOS = pin;
+ADC0->INPUTCTRL.bit.MUXPOS = g_APinDescription[pin].ulADCChannelNumber;
   };
 //while (ADC->STATUS.bit.SYNCBUSY) {};
 ADC0->SWTRIG.bit.START = true;           //Start reading again
@@ -178,10 +178,10 @@ void AttachADC1(int ADCpin, bool IDACRefon) {
 
   if (IDACRefon) {
 ADC1->INPUTCTRL.bit.MUXNEG = 0;
-ADC1->INPUTCTRL.bit.MUXPOS = ADCpin;
+ADC1->INPUTCTRL.bit.MUXPOS = g_APinDescription[ADCpin].ulADCChannelNumber;
   } else {
 ADC1->INPUTCTRL.bit.MUXNEG = 0x18;
-ADC1->INPUTCTRL.bit.MUXPOS = ADCpin;
+ADC1->INPUTCTRL.bit.MUXPOS = g_APinDescription[ADCpin].ulADCChannelNumber;
   };
   
 }
