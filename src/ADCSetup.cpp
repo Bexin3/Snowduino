@@ -7,16 +7,20 @@ int16_t anv = 0;
 
 void ADC0Setup(bool DacRef, int Res, int Samp, int ADCClk, int ADCDiv, int BaseV, bool Freerun, bool PreDiv) {
 
-/*  genericClockSetup(ADCClk, ADCDiv);        //Sets up ADC clock and divides it
+ genericClockSetup(ADCClk, ADCDiv);        //Sets up ADC clock and divides it
   AttachClock(ADCClk, 0x1E);
 
   if (DacRef) {
   DACSetup(BaseV);  //Setup DAC if needed
   };
-*/
+
 ADC0->CALIB.reg = ADC_CALIB_BIASCOMP(0x7) | ADC_CALIB_BIASREFBUF(0x7);
 
+  if (DacRef) {
   ADC0->REFCTRL.bit.REFSEL = ADC_REFCTRL_REFSEL_INTVCC1_Val;
+  } else {
+  ADC0->REFCTRL.bit.REFSEL = ADC_REFCTRL_REFSEL_INTVCC2_Val;
+  };
   
 
 
@@ -118,16 +122,20 @@ return(anv);               //Write it down
 
 void ADC1Setup(bool DacRef, int Res, int Samp, int ADCClk, int ADCDiv, int BaseV, bool Freerun, bool PreDiv) {
 
-/*  genericClockSetup(ADCClk, ADCDiv);        //Sets up ADC clock and divides it
+  genericClockSetup(ADCClk, ADCDiv);        //Sets up ADC clock and divides it
   AttachClock(ADCClk, 0x1E);
 
   if (DacRef) {
   DACSetup(BaseV);  //Setup DAC if needed
   };
-*/
+
 ADC1->CALIB.reg = ADC_CALIB_BIASCOMP(0x7) | ADC_CALIB_BIASREFBUF(0x7);
 
-  ADC1->REFCTRL.bit.REFSEL = ADC_REFCTRL_REFSEL_INTVCC1_Val;
+  if (DacRef) {
+  ADC0->REFCTRL.bit.REFSEL = ADC_REFCTRL_REFSEL_INTVCC1_Val;
+  } else {
+  ADC0->REFCTRL.bit.REFSEL = ADC_REFCTRL_REFSEL_INTVCC2_Val;
+  };
   
 
 
