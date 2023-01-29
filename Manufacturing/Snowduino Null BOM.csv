@@ -28,8 +28,8 @@ Quantity;Reference;Footprint;Description;Manufacturer;Part number;Notes
 2;Q3, Q5;SOT-23;Q_PMOS_GSD;;PMV48XP;
 6;R1,R9,R14,R12,R13,R17;R_0603_1608Metric;330r;;0603WAF3300T5E;Can be replaced by another 0603 SMD resistor with same resistance
 2;R10,R11;R_0603_1608Metric;27r;;0603WAF270JT5E;Can be replaced by another 0603 SMD resistor with same resistance
-5;R18,R22,R15,R16,R21;R_0603_1608Metric;52k3;;0603WAF5232T5E;Can be replaced by another 0603 SMD resistor with same resistance
-5;R20,R5,R2,R4,R19;R_0603_1608Metric;10k;;0603WAF1002T5E;Can be replaced by another 0603 SMD resistor with same resistance
+4;R18,R15,R16,R21;R_0603_1608Metric;52k3;;0603WAF5232T5E;Can be replaced by another 0603 SMD resistor with same resistance
+6;R20,R22,R5,R2,R4,R19;R_0603_1608Metric;10k;;0603WAF1002T5E;Can be replaced by another 0603 SMD resistor with same resistance
 2;R23,R6;R_0603_1608Metric;1M;;0603WAF1004T5E;Can be replaced by another 0603 SMD resistor with same resistance
 1;R3;R_0603_1608Metric;1k;;0603WAF1001T5E;Can be replaced by another 0603 SMD resistor with same resistance
 2;R7,R8;R_0603_1608Metric;5.1k;;0603WAF5101T5E;Can be replaced by another 0603 SMD resistor with same resistance
