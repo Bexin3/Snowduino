@@ -1,7 +1,7 @@
 (export (version "E")
   (design
-    (source "/Users/benjamingombala/Desktop/Snowduino Null/Snowduino Null.kicad_sch")
-    (date "2023 January 29, Sunday 12:06:17")
+    (source "/Users/benjamingombala/Desktop/Snowduino Null Production/Snowduino Null.kicad_sch")
+    (date "2023 January 29, Sunday 19:06:45")
     (tool "Eeschema (6.0.1-0)")
     (sheet (number "1") (name "/") (tstamps "/")
       (title_block
@@ -737,7 +737,7 @@
       (sheetpath (names "/") (tstamps "/"))
       (tstamps "3f6e5e71-795c-43de-9b0c-b07198fc8f11"))
     (comp (ref "R22")
-      (value "52K3")
+      (value "10K")
       (footprint "Resistor_SMD:R_0603_1608Metric")
       (datasheet "~")
       (libsource (lib "Device") (part "R") (description "Resistor"))

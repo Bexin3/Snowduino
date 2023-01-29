@@ -3213,6 +3213,7 @@
     )
   )
 
+
   (junction (at 184.15 222.25) (diameter 0.9144) (color 0 0 0 0)
     (uuid 0767d002-4c6a-4908-baa7-7bc83bf26e4c)
   )
@@ -7199,7 +7200,7 @@
     (property "Reference" "R22" (id 0) (at 354.33 73.6599 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "52K3" (id 1) (at 354.33 76.1999 0)
+    (property "Value" "10K" (id 1) (at 354.33 76.1999 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (id 2) (at 350.012 74.93 90)
@@ -8181,7 +8182,7 @@
       (reference "R21") (unit 1) (value "52K3") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
     (path "/aa5a9908-1af2-474c-827c-a5f2274b4d23"
-      (reference "R22") (unit 1) (value "52K3") (footprint "Resistor_SMD:R_0603_1608Metric")
+      (reference "R22") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
     (path "/31722a14-7c0c-48ed-a9ba-b6a2e0a2f3ad"
       (reference "R23") (unit 1) (value "1M") (footprint "Resistor_SMD:R_0603_1608Metric")
