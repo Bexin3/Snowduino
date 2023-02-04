@@ -45,7 +45,7 @@ else
   endif
 endif
 
-ARM_GCC_PATH?=$(MODULE_PATH)/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/arm-none-eabi-
+ARM_GCC_PATH?=$(MODULE_PATH)/tools/arm-none-eabi-gcc/7-2017q4/bin/arm-none-eabi-
 BUILD_PATH=build
 
 # -----------------------------------------------------------------------------
@@ -58,10 +58,11 @@ SIZE=$(ARM_GCC_PATH)size
 # -----------------------------------------------------------------------------
 # Boards definitions
 BOARD_ID?=arduino_zero
+NAME?=samc21_sam_ba
 
 # -----------------------------------------------------------------------------
 # Compiler options
-CFLAGS_EXTRA=-D__SAMC21J18A__ -DBOARD_ID_$(BOARD_ID)
+CFLAGS_EXTRA=-D__SAMC21J18A__ -DBOARD_ID_$(BOARD_ID) -D$(SAM_BA_INTERFACES)
 CFLAGS=-mthumb -mcpu=cortex-m0plus -Wall -c -std=gnu99 -ffunction-sections -fdata-sections -nostdlib -nostartfiles --param max-inline-insns-single=500
 ifdef DEBUG
   CFLAGS+=-g3 -O1 -DDEBUG=1
@@ -102,6 +103,7 @@ else
   AS_BUILD=
   AS_CLEAN=
 endif
+
 
 
 all: print_info $(SOURCES) $(BIN) $(HEX) $(AS_BUILD)
